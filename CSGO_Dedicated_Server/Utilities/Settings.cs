@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace CSGO_Dedicated_Server.Utilities
 {
@@ -10,16 +12,12 @@ namespace CSGO_Dedicated_Server.Utilities
     {
         public string Path { get; set; }
         public int GameMode { get; set; }
+        public string Map { get; set; }
 
-        public static void SaveToFile(Settings settings)
+        public void Save()
         {
-            // JSON save
-        }
-
-        public static Settings LoadFromFile(string path)
-        {
-            // Json load from file 
-            return new Settings();
+            var json = JsonConvert.SerializeObject(this);
+            System.IO.File.WriteAllText(@".\settings.txt", json);
         }
     }
 }

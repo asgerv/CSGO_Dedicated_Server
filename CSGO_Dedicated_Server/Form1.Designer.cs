@@ -34,16 +34,14 @@
             this.comboBox_gamemode = new System.Windows.Forms.ComboBox();
             this.button_start = new System.Windows.Forms.Button();
             this.label_gamemode = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_map = new System.Windows.Forms.Label();
+            this.textBox_map = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_path
             // 
             this.label_path.AutoSize = true;
-            this.label_path.Location = new System.Drawing.Point(12, 87);
+            this.label_path.Location = new System.Drawing.Point(12, 9);
             this.label_path.Name = "label_path";
             this.label_path.Size = new System.Drawing.Size(32, 13);
             this.label_path.TabIndex = 0;
@@ -51,7 +49,7 @@
             // 
             // button_chooseFile
             // 
-            this.button_chooseFile.Location = new System.Drawing.Point(15, 103);
+            this.button_chooseFile.Location = new System.Drawing.Point(12, 25);
             this.button_chooseFile.Name = "button_chooseFile";
             this.button_chooseFile.Size = new System.Drawing.Size(101, 23);
             this.button_chooseFile.TabIndex = 2;
@@ -74,7 +72,7 @@
             "Arms Race",
             "Demolition",
             "Deathmatch"});
-            this.comboBox_gamemode.Location = new System.Drawing.Point(15, 175);
+            this.comboBox_gamemode.Location = new System.Drawing.Point(102, 75);
             this.comboBox_gamemode.Name = "comboBox_gamemode";
             this.comboBox_gamemode.Size = new System.Drawing.Size(121, 21);
             this.comboBox_gamemode.TabIndex = 3;
@@ -83,7 +81,7 @@
             // button_start
             // 
             this.button_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_start.Location = new System.Drawing.Point(15, 234);
+            this.button_start.Location = new System.Drawing.Point(16, 274);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(93, 39);
             this.button_start.TabIndex = 4;
@@ -94,57 +92,35 @@
             // label_gamemode
             // 
             this.label_gamemode.AutoSize = true;
-            this.label_gamemode.Location = new System.Drawing.Point(12, 159);
+            this.label_gamemode.Location = new System.Drawing.Point(12, 78);
             this.label_gamemode.Name = "label_gamemode";
-            this.label_gamemode.Size = new System.Drawing.Size(64, 13);
+            this.label_gamemode.Size = new System.Drawing.Size(67, 13);
             this.label_gamemode.TabIndex = 5;
-            this.label_gamemode.Text = "Game mode";
+            this.label_gamemode.Text = "Game mode:";
             // 
-            // label1
+            // label_map
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "1. Choose the csgo dedicated server path. Example: \"C:\\steamcmd\\cs_go\\srcds.exe\"";
+            this.label_map.AutoSize = true;
+            this.label_map.Location = new System.Drawing.Point(13, 104);
+            this.label_map.Name = "label_map";
+            this.label_map.Size = new System.Drawing.Size(31, 13);
+            this.label_map.TabIndex = 7;
+            this.label_map.Text = "Map:";
             // 
-            // label2
+            // textBox_map
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "2. Select game mode";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "3. Press the start button";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "How to use:";
+            this.textBox_map.Location = new System.Drawing.Point(102, 101);
+            this.textBox_map.Name = "textBox_map";
+            this.textBox_map.Size = new System.Drawing.Size(188, 20);
+            this.textBox_map.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 345);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(602, 345);
+            this.Controls.Add(this.textBox_map);
+            this.Controls.Add(this.label_map);
             this.Controls.Add(this.label_gamemode);
             this.Controls.Add(this.button_start);
             this.Controls.Add(this.comboBox_gamemode);
@@ -165,10 +141,8 @@
         private System.Windows.Forms.ComboBox comboBox_gamemode;
         private System.Windows.Forms.Button button_start;
         private System.Windows.Forms.Label label_gamemode;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_map;
+        private System.Windows.Forms.TextBox textBox_map;
     }
 }
 
